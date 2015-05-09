@@ -27,7 +27,7 @@
       <div class="panel-body">
         <dl>
           <dt>Image</dt>
-          <dd><%= image_tag director.image_url %></dd>
+          <dd><%= link_to image_tag("#{director.image_url}"), director_url(director.id) %></dd>
 
           <dt>Bio</dt>
           <dd><%= director.bio %></dd>
