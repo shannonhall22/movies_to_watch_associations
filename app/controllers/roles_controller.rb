@@ -9,6 +9,8 @@ class RolesController < ApplicationController
 
   def new
     @role = Role.new
+    @movie = Movie.all
+    @actor = Actor.all
   end
 
   def create
@@ -26,6 +28,8 @@ class RolesController < ApplicationController
 
   def edit
     @role = Role.find(params[:id])
+    @movie = Movie.all
+    @actor = Actor.all
   end
 
   def update
