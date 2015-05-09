@@ -51,8 +51,8 @@ First, lets take care of the some general cleanup:
 
 1. Clean up the movies views
  - Index and Show
-    - Card heading: show movie title and year instead of ID
-    - Show images instead of raw image URLs
+#   - Card heading: show movie title and year instead of ID
+#   - Show images instead of raw image URLs
     - Images should be clickable links to show pages
     - Replace director names instead of IDs
     - Display links instead of plain text for the director name
@@ -61,14 +61,14 @@ First, lets take care of the some general cleanup:
 
 2. Clean up the actors views
  - Index and Show
-    - Card heading: show actor name instead of ID
-    - Show images instead of raw image URLs
+#   - Card heading: show actor name instead of ID
+#   - Show images instead of raw image URLs
     - Images should be clickable links to show pages
 
 3. Clean up the directors views
  - Index and Show
-    - Card heading: show director name instead of ID
-    - Show images instead of raw image URLs
+#   - Card heading: show director name instead of ID
+#   - Show images instead of raw image URLs
     - Images should be clickable links to show pages
  - Show only
     - display a list of associated movies in a Bootstrap list group

@@ -9,6 +9,7 @@ class MoviesController < ApplicationController
 
   def new
     @movie = Movie.new
+    @director = Director.all
   end
 
   def create
@@ -29,6 +30,7 @@ class MoviesController < ApplicationController
 
   def edit
     @movie = Movie.find(params[:id])
+    @director = Director.all
   end
 
   def update
