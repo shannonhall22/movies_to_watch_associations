@@ -16,8 +16,34 @@
               <dt>Bio</dt>
               <dd><%= @actor.bio %></dd>
 
+              <br>
+
               <dt>Dob</dt>
               <dd><%= @actor.dob %></dd>
+
+              <br>
+
+              <dt>Roles</dt>
+              <dd>
+                <div class="list-group">
+                  <% @actor.role.each do |role|  %>
+                    <a href="<%= role_url(role.id) %>" class="list-group-item">
+                    <%= role.character_name %>
+                    </a>
+                  <% end %>
+                </div>
+              </dd>
+
+              <dt>Movies</dt>
+              <dd>
+                <div class="list-group">
+                  <% @actor.role.each do |movie|  %>
+                    <a href="<%= movie_url(movie.movie.id) %>" class="list-group-item">
+                    <%= movie.movie.title %>
+                    </a>
+                  <% end %>
+                </div>
+              </dd>
 
             </dl>
             <div class="btn-group btn-group-justified">

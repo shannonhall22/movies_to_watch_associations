@@ -25,11 +25,11 @@
 
               <dt>Movies Directed</dt>
               <dd>
-                <% @director.movie.each do |movie| %>
                 <ul class="list-group">
-                  <a href="<%= movie_url(movie.id) %>" class="list-group-item"><%= movie.title %></a>
+                  <% @director.movie.each do |movie| %>
+                    <a href="<%= movie_url(movie.id) %>" class="list-group-item"><%= movie.title %></a>
+                  <% end %>
                 </ul>
-                <% end %>
               </dd>
 
             </dl>
