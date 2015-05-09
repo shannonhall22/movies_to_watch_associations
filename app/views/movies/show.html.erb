@@ -21,19 +21,27 @@
                 <%= link_to image_tag("#{@movie.image_url}"), movie_url(@movie.id) %>
               </dd>
 
+              <br>
+
               <dt>Director</dt>
               <dd>
                 <%= link_to "#{@movie.director.name}", director_url(@movie.director_id) %>
               </dd>
 
+              <br>
+
               <dt>Actors</dt>
               <dd>
                 <div class="list-group">
-                  <% @movie.role.each do |actor| %>
-                    <a href="<%= actor_url(actor.id) %>" class="list-group-item"><%= actor.actor.name %></a>
+                  <% @movie.role.each do |actor|  %>
+                    <a href="<%= actor_url(actor.actor.id) %>" class="list-group-item">
+                    <%= actor.actor.name %>
+                    </a>
                   <% end %>
                 </div>
               </dd>
+
+              <br>
 
               <dt>Roles</dt>
               <dd>

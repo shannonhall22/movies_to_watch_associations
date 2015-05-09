@@ -4,6 +4,6 @@ class Movie < ActiveRecord::Base
   end
 
   def role
-    return Role.where(:actor_id => self.id)
+    return Role.where(:movie_id => self.id)
   end
 end
