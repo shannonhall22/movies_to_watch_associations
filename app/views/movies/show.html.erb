@@ -30,26 +30,25 @@
 
               <br>
 
-              <dt>Actors</dt>
+              <dt>Actor</dt>
               <dd>
                 <div class="list-group">
-                  <% @movie.role.each do |actor|  %>
-                    <a href="<%= actor_url(actor.actor.id) %>" class="list-group-item">
-                    <%= actor.actor.name %>
-                    </a>
+                  <% @movie.actors.each do |actor|  %>
+                    <a href="#" class="list-group-item"><%= actor.name %></a>
                   <% end %>
                 </div>
               </dd>
 
               <br>
 
-              <dt>Roles</dt>
+              <dt>Cast</dt>
               <dd>
                 <div class="list-group">
                   <% @movie.role.each do |role|  %>
-                    <a href="<%= role_url(role.id) %>" class="list-group-item">
-                    <%= role.character_name %>
-                    </a>
+                    <li class="list-group-item">
+                    <%= link_to(role.character_name, role) %>
+                    ( <%= link_to(role.actor.name, actor_url(role.actor.id)) %> )
+                    </li>
                   <% end %>
                 </div>
               </dd>
